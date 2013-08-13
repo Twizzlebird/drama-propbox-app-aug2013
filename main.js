@@ -153,7 +153,6 @@ var Application = {
    initApplication: function() {
       $(document).on(
          'pageinit',
-         '#files-list-page',
          function()
          {
             Application.initFilesListPage();
