@@ -13,7 +13,6 @@
 		<link rel="stylesheet" href="jquery.mobile-1.3.0.min.css" media="screen" />
 		<link rel="stylesheet" href="drama-propbox.min.css" media="screen" />
 		<link rel="stylesheet" href="style.css" media="screen" />
-		<script src="phonegap.js"></script>
 		<script src='jquery.js'></script>
 		<script src="main.js"></script>
 		<script src="jquery.mobile-1.3.0.min.js"></script>
@@ -104,9 +103,16 @@
 <option value="/android_asset/www/tense-highenergy.mp3" class="tense">Tense 3</option>
 </optgroup>
 </select>
-</p>
 
-<div id="files-list-page"></div>
+<select id="localplaylist" onchange="updateMedia()" class="black" data-transition="none" data-native-menu="false">
+<option data-placeholder="false">Choose music</option>
+<optgroup label="Comedy">
+<option value="/android_asset/www/comedy-march.mp3" class="comedy">Comedy 1</option>
+<option value="/android_asset/www/comedy-redrivervalley.mp3" class="comedy">Comedy 2</option>
+<option value="/android_asset/www/comedy-slapstick.mp3" class="comedy">Comedy 3</option>
+</optgroup>
+</select>
+</p>
 
 <div class="ui-grid-a">
 <div class="ui-block-a">
