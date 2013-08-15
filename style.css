@@ -81,3 +81,7 @@ ul.col-2 li{width:100%;float:none;margin:3% 0% !important;}
 
 /*speeches*/
 .speeches .ui-btn-inner{white-space:normal !important;}
+
+/*videos*/
+#lfxbuttons{text-align:center;}
+video{max-width:500px;}
