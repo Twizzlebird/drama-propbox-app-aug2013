@@ -145,44 +145,20 @@ $('#effectsbuttons section').hide();
 $('#' + selectedoption).show();
 });
 
+//as above butforlfx
+$('#lfxbuttons section').hide();
+$("select#lfxgenre").change(function() {
+$('.ui-popup-container').hide();
+$('#lfxbuttons section').hide();
+var selectedoption = $(this).find("option:selected").val();
+$('section#' + selectedoption).show();
+$('video.' + selectedoption).get(0).play()
+});
+
 
 
 });
 
 
-
-
-
-function onDeviceReady() {
-    //request the persistent file system
-    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFSSuccess, onError);    
-}
-function init() {
-    document.addEventListener("deviceready", onDeviceReady, true);
-} 
-
-function onFSSuccess(fs) {
-    fileSystem = fs;
-    getById("#dirListingButton").addEventListener("touchstart",doDirectoryListing);            
-    getById("#metadataFileButton").addEventListener("touchstart",doMetadataFile);            
-    logit( "Got the file system: "+fileSystem.name +"
-" +
-                                    "root entry name is "+fileSystem.root.name + "<p/>")    
-    doDirectoryListing();
-} 
-
-//will need this for iphone conv...
-switch(platform)
-{
-    case 'iPhone':
-      //save to the app document folder
-      break;
-    case 'Android':
-      //save to <external_storage_root>/Music
-      break;
-    case 'BlackBerry':
-      //Save to /SDCard/BlackBerry
-      break;
-}
 
 
