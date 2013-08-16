@@ -148,6 +148,7 @@ $('#' + selectedoption).show();
 //as above butforlfx
 $('#lfxbuttons section').hide();
 $("select#lfxgenre").change(function() {
+$('#emptystage').hide();
 $('.ui-popup-container').hide();
 $('#lfxbuttons section').hide();
 var selectedoption = $(this).find("option:selected").val();
