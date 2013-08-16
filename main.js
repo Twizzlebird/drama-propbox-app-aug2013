@@ -152,6 +152,7 @@ $('.ui-popup-container').hide();
 $('#lfxbuttons section').hide();
 var selectedoption = $(this).find("option:selected").val();
 $('section#' + selectedoption).show();
+$('video.' + selectedoption).get(0).play()
 });
 
 $("#home a").click(function() {
