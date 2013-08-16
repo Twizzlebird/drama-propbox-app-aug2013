@@ -155,7 +155,9 @@ $('section#' + selectedoption).show();
 $('video.' + selectedoption).get(0).play()
 });
 
-
+$("#home a").click(function() {
+$('div').selectmenu('refresh');
+});
 
 });
 
