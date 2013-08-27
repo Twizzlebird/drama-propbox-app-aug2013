@@ -260,80 +260,25 @@
 				<a href="#home" class="homebtn" data-transition="none">Home</a>
 			</header>			
 			<div data-role="content">
-				<center><img src="images/emptystage.jpg" alt="emptystage" id="emptystage"/>
-				<div id="lfxbuttons">
-					<section id="lfx-gobo1">
-					<img src="images/gobotree.jpg" alt="tree" />
-					</section>
-					<section id="lfx-gobo2">
-					<img src="images/gobochurchwindow.jpg" alt="church" />
-					</section>
-					<section id="lfx-gobo3">
-					<img src="images/gobojail.jpg" alt="jail" />
-					</section>
-					<section id="lfx-birdie">
-					<img src="images/birdie.jpg" alt="birdie" />
-					</section>
-					<section id="lfx-spotlight">
-					<img src="images/spotlight.jpg" alt="spot" />
-					</section>
-					<section id="lfx-followspot">
-					<video class="lfx-followspot" controls>
-					  <source src="http://twizzlebirdcdn.s3.amazonaws.com/drama-propbox/followspot.mp4" type="video/mp4">
-					</video>			
-					</section>
-					<section id="lfx-straw">
-					<img src="images/straw.jpg" alt="straw" />
-					</section>
-					<section id="lfx-bluewash">
-					<div><img src="images/blue-wash.jpg" alt="blue wash" /></div>
-					</section>
-					<section id="lfx-redwash">
-					<div><img src="images/red-wash.jpg" alt="red wash" /></div>
-					</section>
-					<section id="lfx-blackout">
-					<video class="lfx-followspot" controls>
-					  <source src="http://twizzlebirdcdn.s3.amazonaws.com/drama-propbox/blackout.mp4" type="video/mp4">
-					</video>
-					</section>
-					<section id="lfx-strobe">
-					<video class="lfx-followspot" controls>
-					  <source src="http://twizzlebirdcdn.s3.amazonaws.com/drama-propbox/strobe.mp4" type="video/mp4">
-					</video>
-					</section>
-					<section id="lfx-xfade">
-					<video class="lfx-followspot" controls>
-					  <source src="http://twizzlebirdcdn.s3.amazonaws.com/drama-propbox/xfade.mp4" type="video/mp4">
-					</video>
-					</section>
-					<section id="lfx-snap">
-					<video class="lfx-followspot" controls>
-					  <source src="http://twizzlebirdcdn.s3.amazonaws.com/drama-propbox/snap.mp4" type="video/mp4">
-					</video>
-					</section>
-					<section id="lfx-scroller">
-					<video class="lfx-followspot" controls>
-					  <source src="http://twizzlebirdcdn.s3.amazonaws.com/drama-propbox/scroller.mp4" type="video/mp4">
-					</video>
-					</section>
-					
-					<select id="lfxgenre" data-native-menu="false" data-transition="none">
-					<option value="" data-placeholder="true">Choose an effect</option>
-					<option value="lfx-gobo1">Gobo 1 - Tree</option>
-					<option value="lfx-gobo2">Gobo 2 - Church windows</option>
-					<option value="lfx-gobo3">Gobo 3 - Jail bars</option>
-					<option value="lfx-birdie">Birdie</option>
-					<option value="lfx-spotlight">Spotlight</option>
-					<option value="lfx-followspot">Follow spot</option>
-					<option value="lfx-straw">Straw</option>
-					<option value="lfx-bluewash">Blue wash</option>
-					<option value="lfx-redwash">Red wash</option>
-					<option value="lfx-blackout">Blackout</option>
-					<option value="lfx-strobe">Strobe</option>
-					<option value="lfx-xfade">X fade</option>
-					<option value="lfx-snap">Snap</option>
-					<option value="lfx-scroller">Scroller</option>
-				</select>
+				<div id="effectsbuttons">
+				<center><img src="images/fx-lfx.png" alt="amp" /></center>
+					<div class="ui-grid-a">
+						<div class="ui-block-a first"><button onclick="doPlay('animals-crickets');" href="#" data-mini="true">Gobo Tree</button></div>
+						<div class="ui-block-b first"><button onclick="doPlay('animals-wolf');" href="#" data-mini="true">Gobo Church windows</button></div>
+						<div class="ui-block-a second"><button onclick="doPlay('animals-dogbark');" href="#" data-mini="true">Gobo Jail bars</button></div>
+						<div class="ui-block-b second"><button onclick="doPlay('animals-doggrowling');" href="#" data-mini="true">Birdie</button></div>
+						<div class="ui-block-a first"><button onclick="doPlay('animals-horsegallop');" href="#" data-mini="true">Spotlight</button></div>
+						<div class="ui-block-b first"><button onclick="doPlay('animals-horsetrot');" href="#" data-mini="true">Follow spot</button></div>
+						<div class="ui-block-a first"><button onclick="doPlay('animals-crickets');" href="#" data-mini="true">Straw</button></div>
+						<div class="ui-block-b first"><button onclick="doPlay('animals-wolf');" href="#" data-mini="true">Red wash</button></div>
+						<div class="ui-block-a second"><button onclick="doPlay('animals-dogbark');" href="#" data-mini="true">Blue wash</button></div>
+						<div class="ui-block-b second"><button onclick="doPlay('animals-doggrowling');" href="#" data-mini="true">Blackout</button></div>
+						<div class="ui-block-a first"><button onclick="doPlay('animals-horsegallop');" href="#" data-mini="true">Strobe</button></div>
+						<div class="ui-block-b first"><button onclick="doPlay('animals-horsetrot');" href="#" data-mini="true">X-fade</button></div>
+						<div class="ui-block-b first"><button onclick="doPlay('animals-horsetrot');" href="#" data-mini="true">Snap</button></div>
+						<div class="ui-block-b first"><button onclick="doPlay('animals-horsetrot');" href="#" data-mini="true">Scroller</button></div>
+					</div><!-- /grid-b -->					
+					<br />
 				</div>
 			</div>
 		</div>
