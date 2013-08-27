@@ -159,11 +159,6 @@ $("#home a").click(function() {
 $('div').selectmenu('refresh');
 });
 
-//should help vid playback in older versions of android
-var video = document.getElementById('video');
-video.addEventListener('click',function(){
-  video.play();
-},false);
 
 });
 
