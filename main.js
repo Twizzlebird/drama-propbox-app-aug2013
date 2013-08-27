@@ -159,6 +159,13 @@ $("#home a").click(function() {
 $('div').selectmenu('refresh');
 });
 
+//set timeout for the lfx pop ups
+$(document).on('popupafteropen', '.ui-popup', function() {
+ setTimeout(function () {
+  $(this).popup('close');
+ }, 5000);
+});
+
 });
 
 
