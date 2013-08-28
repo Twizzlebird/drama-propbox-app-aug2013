@@ -73,9 +73,9 @@ function setAudioPosition(position) {
 document.getElementById('audio_position').innerHTML =position;
 }
 
-if(isAndroid()){
+if(isiOS()){
 function doPlay(soundId) {
-  var my_media = new Media("/android_asset/www/"+soundId+".mp3",
+  var my_media = new Media(soundId+".mp3",
     function() {
 	  my_media.release();
     },
@@ -84,9 +84,9 @@ function doPlay(soundId) {
   });
   my_media.play();
 }
-}else if(isiOS()){
+} else {
 function doPlay(soundId) {
-  var my_media = new Media(soundId+".mp3",
+  var my_media = new Media("/android_asset/www/"+soundId+".mp3",
     function() {
 	  my_media.release();
     },
