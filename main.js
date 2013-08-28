@@ -63,9 +63,7 @@ function setAudioPosition(position) {
 document.getElementById('audio_position').innerHTML =position;
 }
 
-var ua = navigator.userAgent.toLowerCase();
-var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-if(isAndroid) {
+if (navigator.userAgent.toLowerCase().match(/android/))
 function doPlay(soundId) {
   var my_media = new Media("/android_asset/www/"+soundId+".mp3",
     function() {
@@ -76,7 +74,7 @@ function doPlay(soundId) {
   });
   my_media.play();
 }
-} else {
+else
 function doPlay(soundId) {
   var my_media = new Media(soundId+".mp3",
     function() {
