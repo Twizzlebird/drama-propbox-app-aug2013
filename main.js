@@ -64,7 +64,7 @@ document.getElementById('audio_position').innerHTML =position;
 }
 
 function doPlay(soundId) {
-  var my_media = new Media("/android_asset/www/"+soundId+".mp3")
+  var my_media = new Media(soundId+".mp3",
     function() {
 	  my_media.release();
     },
