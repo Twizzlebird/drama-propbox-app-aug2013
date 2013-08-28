@@ -63,15 +63,11 @@ function setAudioPosition(position) {
 document.getElementById('audio_position').innerHTML =position;
 }
 
-function doPlay(soundId) {
 var ua = navigator.userAgent.toLowerCase();
 var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 if(isAndroid) {
-var my_media = new Media("/android_asset/www/"+soundId+".mp3",
-} else {
-var my_media = new Media(soundId+".mp3",
-}
-  
+function doPlay(soundId) {
+  var my_media = new Media("/android_asset/www/"+soundId+".mp3",
     function() {
 	  my_media.release();
     },
@@ -80,6 +76,19 @@ var my_media = new Media(soundId+".mp3",
   });
   my_media.play();
 }
+} else {
+function doPlay(soundId) {
+  var my_media = new Media(soundId+".mp3",
+    function() {
+	  my_media.release();
+    },
+    function(err) {
+	my_media.release();
+  });
+  my_media.play();
+}
+}
+
 
 
 $(document).on('pageinit', function(){
