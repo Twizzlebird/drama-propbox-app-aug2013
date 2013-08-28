@@ -8,6 +8,12 @@ $( document ).bind( 'mobileinit', function(){
   $.mobile.buttonMarkup.hoverDelay = "50";
 });
 
+var plat="null";
+function onDeviceReady() {
+var plat=device.platform;
+}
+alert (plat);
+
 //////////////////////////////////////////////////////////////////////////Music player
 var myMedia = null;
 var playing = false;
