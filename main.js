@@ -65,28 +65,6 @@ document.getElementById('audio_position').innerHTML =position;
 
 $(document).on('pageinit', function(){
 
-var thePlatform = device.platform.toLowerCase();
-if (thePlatform.indexOf("iphone") > -1 ||
-    thePlatform.indexOf("ipad") > -1)
-{
-    thePlatform = "ios";
-}
-
-if (thePlatform == "ios"){
-
-function doPlay(soundId) {
-  var my_media = new Media(soundId+".mp3",
-    function() {
-	  my_media.release();
-    },
-    function(err) {
-	my_media.release();
-  });
-  my_media.play();
-}
-
-} else {
-
 function doPlay(soundId) {
   var my_media = new Media("/android_asset/www/"+soundId+".mp3",
     function() {
@@ -96,8 +74,6 @@ function doPlay(soundId) {
 	my_media.release();
   });
   my_media.play();
-}
-
 }
 
 //scenario spinner
