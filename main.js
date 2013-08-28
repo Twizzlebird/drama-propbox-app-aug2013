@@ -73,29 +73,7 @@ function setAudioPosition(position) {
 document.getElementById('audio_position').innerHTML =position;
 }
 
-if(isiOS()){
-function doPlay(soundId) {
-  var my_media = new Media(soundId+".mp3",
-    function() {
-	  my_media.release();
-    },
-    function(err) {
-	my_media.release();
-  });
-  my_media.play();
-}
-} else {
-function doPlay(soundId) {
-  var my_media = new Media("/android_asset/www/"+soundId+".mp3",
-    function() {
-	  my_media.release();
-    },
-    function(err) {
-	my_media.release();
-  });
-  my_media.play();
-}
-}
+
 
 $(document).on('pageinit', function(){
 
