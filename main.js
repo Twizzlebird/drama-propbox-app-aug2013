@@ -8,11 +8,20 @@ $( document ).bind( 'mobileinit', function(){
   $.mobile.buttonMarkup.hoverDelay = "50";
 });
 
-var plat="null";
-function onDeviceReady() {
-var plat=device.platform;
-}
-alert (plat);
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i) ? true : false;
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.iOS());
+    }
+};
+
+if( isMobile.iOS() ) alert('iOS');
+if( isMobile.Android() ) alert('android');
 
 //////////////////////////////////////////////////////////////////////////Music player
 var myMedia = null;
