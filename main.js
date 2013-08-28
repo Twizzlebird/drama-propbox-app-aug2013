@@ -8,28 +8,6 @@ $( document ).bind( 'mobileinit', function(){
   $.mobile.buttonMarkup.hoverDelay = "50";
 });
 
-    function init() {
-        if(isAndroid()){
-            $("script").attr("src", "android.js").appendTo("head");
-        }else if(isiOS()){
-            $("script").attr("src", "ios.js").appendTo("head");
-        }
-
-         document.addEventListener("deviceready", onDeviceReady, false);
-    }
-
-    function isAndroid(){
-        return navigator.userAgent.indexOf("Android") > 0;
-    }
-
-    function isiOS(){
-        return ( navigator.userAgent.indexOf("iPhone") > 0 || navigator.userAgent.indexOf("iPad") > 0 || navigator.userAgent.indexOf("iPod") > 0); 
-    }
-
-    function onDeviceReady(){
-        console.log("device is ready");
-    }
-
 //////////////////////////////////////////////////////////////////////////Music player
 var myMedia = null;
 var playing = false;
@@ -85,9 +63,18 @@ function setAudioPosition(position) {
 document.getElementById('audio_position').innerHTML =position;
 }
 
-
-
 $(document).on('pageinit', function(){
+
+function doPlay(soundId) {
+  var my_media = new Media("/android_asset/www/"+soundId+".mp3",
+    function() {
+	  my_media.release();
+    },
+    function(err) {
+	my_media.release();
+  });
+  my_media.play();
+}
 
 //scenario spinner
 $('#spin').click(function() {
