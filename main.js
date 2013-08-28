@@ -8,6 +8,16 @@ $( document ).bind( 'mobileinit', function(){
   $.mobile.buttonMarkup.hoverDelay = "50";
 });
 
+function isAndroid(){
+	return navigator.userAgent.indexOf("Android") > 0;
+}
+function isiOS(){
+	return ( navigator.userAgent.indexOf("iPhone") > 0 || navigator.userAgent.indexOf("iPad") > 0 || navigator.userAgent.indexOf("iPod") > 0); 
+}
+function onDeviceReady(){
+	console.log("device is ready");
+}
+
 //////////////////////////////////////////////////////////////////////////Music player
 var myMedia = null;
 var playing = false;
@@ -63,7 +73,7 @@ function setAudioPosition(position) {
 document.getElementById('audio_position').innerHTML =position;
 }
 
-if (navigator.userAgent.toLowerCase().match(/android/))
+if(isAndroid()){
 function doPlay(soundId) {
   var my_media = new Media("/android_asset/www/"+soundId+".mp3",
     function() {
@@ -74,7 +84,7 @@ function doPlay(soundId) {
   });
   my_media.play();
 }
-else
+}else if(isiOS()){
 function doPlay(soundId) {
   var my_media = new Media(soundId+".mp3",
     function() {
@@ -86,8 +96,6 @@ function doPlay(soundId) {
   my_media.play();
 }
 }
-
-
 
 $(document).on('pageinit', function(){
 
