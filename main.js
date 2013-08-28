@@ -65,17 +65,6 @@ document.getElementById('audio_position').innerHTML =position;
 
 $(document).on('pageinit', function(){
 
-function doPlay(soundId) {
-  var my_media = new Media("/android_asset/www/"+soundId+".mp3",
-    function() {
-	  my_media.release();
-    },
-    function(err) {
-	my_media.release();
-  });
-  my_media.play();
-}
-
 //scenario spinner
 $('#spin').click(function() {
 var starring = new Array(
