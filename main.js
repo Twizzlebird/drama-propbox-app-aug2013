@@ -20,14 +20,6 @@ var isMobile = {
     }
 };
 
-if(ismobile == "Android"){
-alert('pandroid');
-} 
-
-if(ismobile == "IOS"){
-alert('piefone');
-} 
-
 //////////////////////////////////////////////////////////////////////////Music player
 var myMedia = null;
 var playing = false;
@@ -84,7 +76,13 @@ document.getElementById('audio_position').innerHTML =position;
 }
 
 function doPlay(soundId) {
-  var my_media = new Media("/android_asset/www/"+soundId+".mp3",
+getPhoneGapPath: function () {
+    'use strict';
+    var path = window.location.pathname;
+    var phoneGapPath = path.substring(0, path.lastIndexOf('/') + 1);
+    return phoneGapPath;
+}
+  var my_media = new Media(getPhoneGapPath()+soundId+".mp3",
     function() {
 	  my_media.release();
     },
