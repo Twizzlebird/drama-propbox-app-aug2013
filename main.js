@@ -1,25 +1,25 @@
-$( document ).bind( 'mobileinit', function(){
-  $.mobile.loader.prototype.options.text = "loading";
-  $.mobile.loader.prototype.options.textVisible = true;
-  $.mobile.loader.prototype.options.theme = "a";
-  $.mobile.loader.prototype.options.html = "";
-  $.mobile.defaultPageTransition = "none";
-  $.mobile.defaultDialogTransition = "none";
-  $.mobile.buttonMarkup.hoverDelay = "50";
+$(document).bind('mobileinit', function () {
+    $.mobile.loader.prototype.options.text = "loading";
+    $.mobile.loader.prototype.options.textVisible = true;
+    $.mobile.loader.prototype.options.theme = "a";
+    $.mobile.loader.prototype.options.html = "";
+    $.mobile.defaultPageTransition = "none";
+    $.mobile.defaultDialogTransition = "none";
+    $.mobile.buttonMarkup.hoverDelay = "50";
 });
 
 //////////////////////////////////////////////////////////////////////////Music player
 var myMedia = null;
 var playing = false;
 function playAudio() {
-	if (!playing) {
-	myMedia.play();	
-	document.getElementById('play').src = "images/pause.png";
-	playing = true;	
+    if (!playing) {
+        myMedia.play();	
+        document.getElementById('play').src = "images/pause.png";
+        playing = true;	
 } else {
-	myMedia.pause();
-	document.getElementById('play').src = "images/play.png";
-	playing = false;
+    myMedia.pause();
+    document.getElementById('play').src = "images/play.png";
+    playing = false;
 }
 } 
 function stopAudio() {
