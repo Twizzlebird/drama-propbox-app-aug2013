@@ -1,6 +1,6 @@
 body{height:100%;background:#000;color:#fff !important;}
 header{height:100px;}
-h1{text-align:center;}
+#speechselectors,h1{text-align:center;margin-top:-20px;}
 .ui-page div img{display:block;margin:0px auto;}
 .ui-page {background: #000;background-image:url(images/bg.jpg);background-repeat: no-repeat;background-size:100% auto;}
 .ui-btn-text, h1, h2, p{text-shadow:none !important;}
