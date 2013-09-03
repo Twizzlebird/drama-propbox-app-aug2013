@@ -156,7 +156,7 @@ $('section#' + selectedoption).show();
 });
 
 $("#home a").click(function() {
-$('#effectsbuttons').hide();
+$('#soundfx #effectsbuttons').hide();
 var myselect = $("select#sfxgenre");
 myselect[0].selectedIndex =0;
 myselect.selectmenu("refresh");
