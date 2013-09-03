@@ -162,11 +162,6 @@ myselect[0].selectedIndex =0;
 myselect.selectmenu("refresh");
 });
 
-var followspotvideo = document.getElementById('followspotvideo');
-followspotvideo.addEventListener('click',function(){
-  followspotvideo.play();
-},false);
-
 });
 
 
