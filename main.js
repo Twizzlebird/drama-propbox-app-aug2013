@@ -136,14 +136,6 @@ $('#scenariotxt').text( randscen );
 });
 
 
-$("#home a").click(function() {
-$('#soundfx #effectsbuttons').hide();
-var myselect = $("select#sfxgenre");
-myselect[0].selectedIndex =0;
-myselect.selectmenu("refresh");
-});
-
-
 });
 
 
